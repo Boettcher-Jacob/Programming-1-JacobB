@@ -21,6 +21,11 @@ def main():
     move()
     move()
     move()
+    move()
+    turn_left()
+    move()
+    move()
+    move()
 
   
 

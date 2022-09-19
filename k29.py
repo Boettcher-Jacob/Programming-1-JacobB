@@ -80,9 +80,43 @@ class ktools:
     """Letter E w/ Beepers"""
     self.tl()
     self.put
+  def eight(self):
+    self.tl()
+    self.m()
+    self.tr()
+    self.m()
+    self.m()
+    self.tr()
+    self.m()
+    self.m()
+    self.tl()  
+    self.m()
+    self.m()
+    self.tl()  
+    self.m()
+    self.m()
+    self.tl()  
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.m()
+    self.tr()
+    self.m()
+    self.m()
+    self.tr()
+    self.m()
+    self.tr()
 def main():
     """ Karel code goes here! """
     kt=ktools()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.eight()
     pass
 
 

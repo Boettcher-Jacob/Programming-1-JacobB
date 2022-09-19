@@ -80,9 +80,34 @@ class ktools:
     """Letter E w/ Beepers"""
     self.tl()
     self.put
+  def m5(self):
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
 def main():
     """ Karel code goes here! """
     kt=ktools()
+
+    kt.m()
+    kt.tl()
+    kt.m5()
+    kt.pick()
+    kt.m()
+    kt.pick()
+    kt.tr()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.m()
+    kt.pick()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.pick()
+    kt.m()
+    kt.m()
     pass
 
 

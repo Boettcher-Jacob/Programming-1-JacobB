@@ -1,5 +1,4 @@
 from stanfordkarel import *
-from time import sleep
 
 
 class ktools:
@@ -114,35 +113,64 @@ class ktools:
         if self.ric():
           self.tr()
           self.m()
+  def o(self):
+    self.tl()
+    self.put5()
+    self.tr()
+    self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.put5()
+    self.tr()
+    self.m()
+    self.put2()
+  def zero(self):
+    def o(self):
+      self.tl() # Start of 0
+      self.put5()
+      self.tr()
+      self.m()
+      self.put()
+      self.m()
+      self.tr()
+      self.put5()
+      self.tr()
+      self.m()
+      self.put() # End of 0
+    pass
+
   def mm(self, num):
     for number in range(num):
       self.m()
-    pass
+  def pickm(self, num):
+    for l in range(num-1):
+      self.pick()
+      self.m()
+    self.pick()
+  def putm(self, num):
+    for l in range(num-1):
+      self.put()
+      self.m()
+    self.put()
 def main():
     """ Karel code goes here! """
     kt=ktools()
+    kt.pickm(3)
     kt.m()
     kt.tl()
+    kt.pickm(3)
     kt.m()
-    kt.mazemove()
-    sleep(3)
     kt.tl()
-    kt.mm(4)
-    kt.mazemove()
+    kt.pickm(3)
     kt.m()
-    kt.tr()
+    kt.tl()
+    kt.pickm(3)
     kt.m()
-    kt.tr()
-    kt.mm(9)
-    kt.tr()
-    kt.m()
-    kt.tr()
-    kt.m()
-    kt.tr()
-    kt.mm(6)
-    kt.mazemove()
-    kt.mm(7)
+    kt.tl()
+    
     pass
+    
 
 
 if __name__ == "__main__":

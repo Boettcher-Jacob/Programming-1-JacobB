@@ -118,6 +118,18 @@ class ktools:
     self.put5()
     self.tr()
     self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.put5()
+    self.tr()
+    self.m()
+    self.put2()
+  def o(self):
+    self.tl()
+    self.put5()
+    self.tr()
+    self.m()
     self.put()
     self.m()
     self.tr()
@@ -125,19 +137,6 @@ class ktools:
     self.tr()
     self.m()
     self.put()
-  def zero(self):
-    def o(self):
-      self.tl()
-      self.put5()
-      self.tr()
-      self.m()
-      self.put()
-      self.m()
-      self.tr()
-      self.put5()
-      self.tr()
-      self.m()
-      self.put()
     pass
 
   def mm(self, num):
@@ -153,83 +152,55 @@ class ktools:
       self.put()
       self.m()
     self.put()
-  def j(self):
-    self.put2()
+  def sob(self) -> bool:
+    """Standing on Beeper""" 
+    return beepers_present()
+
+  def jump(self):
+    """Jump for 510"""
+    while self.fic():
+      self.m()
     self.tl()
+    while self.rib():
+      self.m()
+    self.tr()
     self.m()
-    self.putm(4)
+    self.tr()
+    while self.fic():
+      self.m()
     self.tl()
-    self.m()
-    self.put()
-    self.ta()
-    self.mm(2)
-    self.put()
-  def a(self):
-    self.putm(3)
-    self.tr()
-    self.m()
-    self.putm(4)
-    self.tr()
-    self.mm(2)
-    self.tr()
-    self.putm(3)
-    self.tr()
-    self.m()
-    self.put()
-    self.ta()
-    self.m()
-    self.tr()
-    self.m()
-    self.put()
-  def c(self):
-    self.putm(3)
-    self.tr()
-    self.mm(4)
-    self.tr()
-    self.putm(3)
-    self.tr()
-    self.m()
-    self.putm(3)
-  def b(self):
-    self.put5() # Start of B
-    self.tr()
-    self.m()
-    self.tr()
-    self.put()
-    self.mm(2)
-    self.put()
-    self.mm(2)
-    self.put()
-    self.tl()
-    self.m()
-    self.tl()
-    self.m()
-    self.put()
-    self.mm(2)
-    self.put()
+
+  def find(self):
+      """Find for 515"""
+      while not facing_north():
+        self.tl()
+      self.m()
+      if not self.sob():
+        self.tl()
+        self.m()
+        self.tl()
+        self.m()
+      for _ in range(2):
+        if not self.sob():
+          self.m()
+          self.tl()
+          self.m()
+      pass
+
 def main():
     """ Karel code goes here! """
     kt=ktools()
+    kt.putm(9)
+    kt.tl()
+    kt.m()
+    kt.putm(2)
+    kt.tl()
+    kt.m()
+    kt.putm(8)
+    kt.tl()
+    kt.m()
+    kt.put()
     pass
-    kt.j()
-    kt.mm(2)
-    kt.a()
-    kt.m()
-    kt.tr()
-    kt.mm(4)
-    kt.c()
-    kt.m()
-    kt.tr()
-    kt.mm(4)
-    kt.tr()
-    kt.mm(4)
-    kt.tl()
-    kt.o()
-    kt.ta()
-    kt.mm(3)
-    kt.tl()
-    kt.b()
-    kt.mm(3)
 
 
 if __name__ == "__main__":

@@ -21,4 +21,4 @@ car4 = {
 mycar=[input]
 carselected = car[mycar]
 gallons=carselected["gallons"]
-miles = carselected["miles"
+miles = carselected["miles"]
